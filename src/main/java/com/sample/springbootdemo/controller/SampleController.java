@@ -15,7 +15,7 @@ public class SampleController {
     }
 
     @GetMapping(path = {"/sample1","/sample1/{name}"})
-    public String testsample(@PathVariable("name") Optional<String> name) {
+    public String testsample1(@PathVariable("name") Optional<String> name) {
         return name.map(n -> "You are Hacked " + n).orElse("You are hacked");
     }
 }
